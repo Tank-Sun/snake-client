@@ -9,6 +9,12 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
+  // print out message and send name to server when connection starts
+  conn.on("connect", () => {
+    console.log('connection start!');
+    conn.write("Name: YS");
+  });
+
   // handle incoming data and print it out for client
   conn.on("data", data => console.log(data));
 };
