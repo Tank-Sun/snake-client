@@ -10,6 +10,7 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   // print out message and send name to server when connection starts
+
   conn.on("connect", () => {
     console.log('connection start!');
     // conn.write("Move: left");
