@@ -12,7 +12,13 @@ const connect = function() {
   // print out message and send name to server when connection starts
   conn.on("connect", () => {
     console.log('connection start!');
+    // conn.write("Move: left");
+    // conn.write("Move: up");
+   
+    // setInterval(() => conn.write("Move: up"), 50);
+    
     conn.write("Name: YS");
+
   });
 
   // handle incoming data and print it out for client
